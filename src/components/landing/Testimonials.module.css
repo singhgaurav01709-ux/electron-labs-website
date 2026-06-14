@@ -1,0 +1,215 @@
+.testimonials {
+  position: relative;
+  background: var(--color-bg);
+}
+
+.carouselWrapper {
+  position: relative;
+  margin-top: var(--space-12);
+  margin-bottom: var(--space-12);
+}
+
+.carousel {
+  display: flex;
+  gap: var(--space-6);
+  overflow-x: auto;
+  padding-bottom: var(--space-8);
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.card {
+  flex: 0 0 calc(100% - var(--space-8));
+  scroll-snap-align: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex: 0 0 calc(50% - var(--space-3));
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    flex: 0 0 calc(33.333% - var(--space-4));
+  }
+}
+
+.quoteIcon {
+  color: var(--color-primary-light);
+  opacity: 0.2;
+  margin-bottom: var(--space-4);
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: var(--space-4);
+}
+
+.quote {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: var(--space-6);
+  font-style: italic;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: auto;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  flex-shrink: 0;
+}
+
+.authorName {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.authorBusiness {
+  font-size: var(--text-sm);
+  color: var(--color-text-dim);
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.navBtn:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-primary-light);
+}
+
+.navLeft {
+  left: calc(var(--space-5) * -1);
+}
+
+.navRight {
+  right: calc(var(--space-5) * -1);
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--space-12) 0;
+  color: var(--color-text-dim);
+  font-size: var(--text-lg);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  margin: var(--space-8) 0;
+}
+
+.submitSection {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-8);
+}
+
+.formCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  width: 100%;
+  max-width: 600px;
+}
+
+.formTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.inputGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.input, .textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: var(--text-base);
+  transition: all 0.2s ease;
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+.successMessage {
+  padding: var(--space-4);
+  background: rgba(34, 197, 94, 0.1);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.errorMessage {
+  color: #ef4444;
+  font-size: var(--text-sm);
+}
