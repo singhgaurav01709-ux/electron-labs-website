@@ -6,6 +6,7 @@ import { Play, ArrowRight } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import AIOrb from '@/components/ui/AIOrb';
 import VoiceWaveform from '@/components/ui/VoiceWaveform';
+import MagicRings from '@/components/ui/MagicRings';
 import styles from './Hero.module.css';
 
 interface HeroProps {
@@ -37,6 +38,32 @@ export default function Hero({
       <div className={styles.bgMesh} />
       <div className={styles.bgGradient} />
       <div className={styles.gridPattern} />
+      
+      <div style={{ position: 'absolute', inset: 0, zIndex: 0, opacity: 0.6, pointerEvents: 'none', overflow: 'hidden' }}>
+        <MagicRings
+          color="#A855F7"
+          colorTwo="#6366F1"
+          ringCount={9}
+          speed={1.3}
+          attenuation={9.5}
+          lineThickness={2}
+          baseRadius={0.35}
+          radiusStep={0.07}
+          scaleRate={0.1}
+          opacity={1}
+          blur={0}
+          noiseAmount={0.03}
+          rotation={0}
+          ringGap={1.5}
+          fadeIn={0.7}
+          fadeOut={0.5}
+          followMouse={false}
+          mouseInfluence={0.2}
+          hoverScale={1.65}
+          parallax={0.05}
+          clickBurst={false}
+        />
+      </div>
 
       <div className={`container ${styles.content}`}>
         <div className={styles.textContent}>
