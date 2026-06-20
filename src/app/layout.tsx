@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { createClient } from '@/lib/supabase/server';
+import GlobalAurora from '@/components/ui/GlobalAurora';
 
 export async function generateMetadata(): Promise<Metadata> {
   let title = 'Electron Labs | Custom AI Systems';
@@ -81,7 +82,10 @@ export default async function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <GlobalAurora />
+        {children}
+      </body>
     </html>
   );
 }
